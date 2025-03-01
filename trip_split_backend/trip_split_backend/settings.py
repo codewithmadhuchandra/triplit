@@ -80,8 +80,12 @@ WSGI_APPLICATION = 'trip_split_backend.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'drf_db',  # Database name
+        'USER': 'drf',       # PostgreSQL username
+        'PASSWORD': '1369',  # PostgreSQL password
+        'HOST': 'localhost',    # Use '127.0.0.1' or your server's IP
+        'PORT': '5432',         # Default PostgreSQL port
     }
 }
 
